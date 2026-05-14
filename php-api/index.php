@@ -118,7 +118,11 @@ $totalTickets = count($tickets);
 $totalSeats = 0;
 $totalRevenue = 0;
 foreach ($trains as $t) { $totalSeats += (int)$t['available_seats']; }
-foreach ($tickets as $b) { $totalRevenue += (float)$b['total_amount']; }
+foreach ($tickets as $b) {
+    if ($b['booking_status'] !== 'Cancelled') {
+        $totalRevenue += (float)$b['total_amount'];
+    }
+}
 ?>
 <!DOCTYPE html>
 <html>
