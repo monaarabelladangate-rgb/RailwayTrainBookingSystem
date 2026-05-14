@@ -39,5 +39,10 @@ Open csharp\TrainTicketBookingApp.sln in Visual Studio.
 Build > Rebuild Solution.
 Press F5.
 
+API Endpoints:
+- GET /api.php?action=getSchedules
+- POST /api.php?action=bookTicket
+- DELETE /api.php?action=cancelBooking
+
 Developer: Mona Arabella Dangate BSIT 3-C
 
