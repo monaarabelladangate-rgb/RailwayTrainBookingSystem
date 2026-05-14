@@ -53,7 +53,7 @@ $pdo = db();
 $msg = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if ($_POST['form_type'] === 'train') {
+    if (isset($_POST['form_type']) && $_POST['form_type'] === 'ticket') {
         $stmt = $pdo->prepare("INSERT INTO trains(train_code, train_name, origin_station, destination_station, departure_time, arrival_time, fare, available_seats, status, created_at)
                                VALUES(?,?,?,?,?,?,?,?,?,?)");
 
