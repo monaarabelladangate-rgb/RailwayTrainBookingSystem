@@ -225,7 +225,7 @@ namespace TrainTicketBookingApp
             lblStatus.Font = new Font("Segoe UI", 9, FontStyle.Bold);
             lblStatus.TextAlign = ContentAlignment.MiddleLeft;
             lblStatus.Padding = new Padding(12, 0, 0, 0);
-            lblStatus.Text = "Ready.";
+            lblStatus.Text = "Ready. Click SYNC FROM API to load train data.";
             Controls.Add(lblStatus);
         }
 
