@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $msg = 'Train schedule added to the operations board.';
     }
 
-    if ($_POST['form_type'] === 'ticket') {
+    if (isset($_POST['form_type']) && $_POST['form_type'] === 'train') {
         $train_id = (int)($_POST['train_id'] ?? 0);
         $seat_count = max(1, (int)($_POST['seat_count'] ?? 1));
 
