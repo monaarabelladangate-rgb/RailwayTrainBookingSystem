@@ -39,4 +39,5 @@ Open csharp\TrainTicketBookingApp.sln in Visual Studio.
 Build > Rebuild Solution.
 Press F5.
 
-Developer: Mona Arabella Dangate
+Developer: Mona Arabella Dangate BSIT 3-C
+
