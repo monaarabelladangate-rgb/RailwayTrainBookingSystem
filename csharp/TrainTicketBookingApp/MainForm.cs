@@ -81,6 +81,8 @@ namespace TrainTicketBookingApp
             btnRefresh.Size = new Size(180, 42);
             StyleButton(btnRefresh, gold, ink);
             btnRefresh.Click += delegate { RefreshAll(); };
+            ToolTip tip = new ToolTip();
+            tip.SetToolTip(btnRefresh, "Sync latest trains and tickets from PHP API");
             side.Controls.Add(btnRefresh);
 
             Label apiBox = new Label();
