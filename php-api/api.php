@@ -119,6 +119,12 @@ try {
             fail('Train ID and status are required.');
         }
 
+        $allowed = ['Active', 'Delayed', 'Cancelled', 'Maintenance'];
+        if (!in_array($status, $allowed)) {
+            fail('Invalid status value. Allowed: Active, Delayed, Cancelled, Maintenance.');
+        }
+    }
+
         $stmt = $pdo->prepare("UPDATE trains SET status=? WHERE id=?");
         $stmt->execute([$status, $id]);
 
